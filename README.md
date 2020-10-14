@@ -1,7 +1,7 @@
 # Vanilla-JS-Slider
 Tiny slider build with Parcel bunlder [scss/js]. This slider Do not use UI libs.
 
-The way it look's like) 👇🏼
+The way it look's like 👇🏼
 
 ![](./preview.png)
 
