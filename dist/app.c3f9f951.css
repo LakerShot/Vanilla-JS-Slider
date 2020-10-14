@@ -1,0 +1,125 @@
+*, *::before, **::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  height: 100vh;
+}
+.carousel__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+  cursor: pointer;
+}
+.carousel__item {
+  display: none;
+}
+.carousel__item img {
+  width: 100%;
+}
+.carousel__item--visible {
+  display: block;
+  animation: fadeVisibility 1s;
+  width: 100%;
+}
+.carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__actions button {
+  cursor: pointer;
+  width: 120px;
+  height: 100vh;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.carousel__actions button:hover .carousel__arrow {
+  animation: blik 2s infinite;
+}
+.carousel__actions button#carousel__button--prev {
+  margin-left: 3rem;
+}
+.carousel__actions button#carousel__button--next {
+  margin-right: 3rem;
+}
+.carousel__indicators {
+  display: flex;
+  bottom: 0;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+.carousel__indicator {
+  background: #807d7d;
+  width: 40px;
+  height: 2px;
+  margin-left: 1rem;
+}
+.carousel__indicator--active {
+  background: #fff;
+}
+.carousel__arrow {
+  border: solid #807d7d;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 1.7rem;
+  z-index: 999;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.carousel__arrow:hover {
+  border-color: #fff;
+}
+.carousel__arrow--left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.carousel__arrow--right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+@keyframes blik {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+/*# sourceMappingURL=/app.c3f9f951.css.map */

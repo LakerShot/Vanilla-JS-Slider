@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel JS</title>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="carousel">
+      <div class="carousel__item carousel__item--visible">
+        <div class="carousel__overlay"></div>
+        <img src="assets/1.jpg" />
+      </div>
+      <div class="carousel__item" >
+        <div class="carousel__overlay"></div>
+        <img src="assets/2.jpg" />
+      </div>
+      <div class="carousel__item" >
+        <div class="carousel__overlay"></div>
+        <img src="assets/3.jpg" />
+      </div>
+
+      <div class="carousel__actions">
+        <button id="carousel__button--prev" class="carousel__btn" data-swipe="left">
+          <i class="carousel__arrow carousel__arrow--left" data-swipe="left"></i>
+        </button>
+        <div class="carousel__indicators">
+          <div class="carousel__indicator" data-slideIdx="0"></div>
+          <div class="carousel__indicator" data-slideIdx="1"></div>
+          <div class="carousel__indicator" data-slideIdx="2"></div>
+        </div>
+        <button id="carousel__button--next" class="carousel__btn" data-swipe="right">
+          <i class="carousel__arrow carousel__arrow--right" data-swipe="right"></i>
+        </button>
+      </div>
+  </div>
+</body>
+</html>
